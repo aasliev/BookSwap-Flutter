@@ -1,6 +1,7 @@
 import 'package:bookswap_flutter/constants.dart';
 import 'package:bookswap_flutter/methods/custom_button.dart';
 import 'package:bookswap_flutter/screens/forgot_password_screen.dart';
+import 'package:bookswap_flutter/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -95,7 +96,8 @@ class SignUpRow extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              print('SignUpTapped');
+              // print('SignUpTapped');
+              Navigator.pushNamed(context, SignUpScreen.id);
             },
             child: Text(
               'Sign Up',

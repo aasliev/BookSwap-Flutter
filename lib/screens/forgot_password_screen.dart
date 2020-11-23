@@ -19,30 +19,33 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    child: Image.asset(kLogoPath),
-                  ),
-                  TextField(
-                    decoration: kTextFieldDecoration.copyWith(
-                      hintText: 'Email',
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      child: Image.asset(kLogoPath),
                     ),
-                    onChanged: (value) {
-                      print(value);
-                    },
-                  ),
-                  SizedBox(
-                    height: 8,
-                  ),
-                  CustomButton(
-                    text: 'Reset Password',
-                    onPressed: () {
-                      print('pressed resetButton');
-                    },
-                  ),
-                ],
+                    TextField(
+                      decoration: kTextFieldDecoration.copyWith(
+                        hintText: 'Email',
+                      ),
+                      onChanged: (value) {
+                        print(value);
+                      },
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    CustomButton(
+                      text: 'Reset Password',
+                      onPressed: () {
+                        print('pressed resetButton');
+                      },
+                    ),
+                  ],
+                ),
               ),
             ),
             SignUpRow(),

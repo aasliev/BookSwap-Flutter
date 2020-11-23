@@ -1,5 +1,6 @@
 import 'package:bookswap_flutter/constants.dart';
 import 'package:bookswap_flutter/screens/sign_in_screen.dart';
+import 'package:bookswap_flutter/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'screens/forgot_password_screen.dart';
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       routes: {
         SignInScreen.id: (context) => SignInScreen(),
         ForgotPassword.id: (context) => ForgotPassword(),
+        SignUpScreen.id: (context) => SignUpScreen(),
       },
     );
   }

@@ -1,6 +1,7 @@
 import 'package:bookswap_flutter/constants.dart';
 import 'package:bookswap_flutter/screens/sign_in_screen.dart';
 import 'package:flutter/material.dart';
+import 'screens/forgot_password_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +13,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: kAppTheme,
-      home: SignInScreen(),
+      initialRoute: SignInScreen.id,
+      routes: {
+        SignInScreen.id: (context) => SignInScreen(),
+        ForgotPassword.id: (context) => ForgotPassword(),
+      },
     );
   }
 }

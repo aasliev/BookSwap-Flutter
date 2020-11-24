@@ -19,33 +19,33 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Expanded(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Hero(
+                    tag: 'logo',
+                    child: Container(
                       child: Image.asset(kLogoPath),
                     ),
-                    TextField(
-                      decoration: kTextFieldDecoration.copyWith(
-                        hintText: 'Email',
-                      ),
-                      onChanged: (value) {
-                        print(value);
-                      },
+                  ),
+                  TextField(
+                    decoration: kTextFieldDecoration.copyWith(
+                      hintText: 'Email',
                     ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    CustomButton(
-                      text: 'Reset Password',
-                      onPressed: () {
-                        print('pressed resetButton');
-                      },
-                    ),
-                  ],
-                ),
+                    onChanged: (value) {
+                      print(value);
+                    },
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  CustomButton(
+                    text: 'Reset Password',
+                    onPressed: () {
+                      print('pressed resetButton');
+                    },
+                  ),
+                ],
               ),
             ),
             SignUpRow(),

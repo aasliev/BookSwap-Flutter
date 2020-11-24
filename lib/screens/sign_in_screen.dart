@@ -23,8 +23,11 @@ class _SignInScreenState extends State<SignInScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    child: Image.asset(kLogoPath),
+                  Hero(
+                    tag: 'logo',
+                    child: Container(
+                      child: Image.asset(kLogoPath),
+                    ),
                   ),
                   TextField(
                     keyboardType: TextInputType.emailAddress,

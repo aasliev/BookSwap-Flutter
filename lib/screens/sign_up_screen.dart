@@ -17,8 +17,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              child: Image.asset(kLogoPath),
+            Hero(
+              tag: 'logo',
+              child: Container(
+                child: Image.asset(kLogoPath),
+              ),
             ),
             TextField(
               decoration: kTextFieldDecoration.copyWith(
